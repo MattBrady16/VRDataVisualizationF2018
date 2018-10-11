@@ -1,0 +1,26 @@
+{
+  "data": {
+    "url": "type3data.json"
+  },
+  "mark": "cube",
+  "encoding": {
+    "x": {
+      "field": "group",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "counts",
+      "type": "quantitative"
+    },
+    "height": {
+      "field": "counts",
+      "type": "quantitative"
+    },
+    "yoffsetpct": {
+      "value": -0.5
+    },
+    "width": {
+      "value": 40
+    }
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "group": "A",
+    "counts": 50
+  },
+  {
+    "group": "B",
+    "counts": 30
+  },
+  {
+    "group": "C",
+    "counts": 35
+  },
+  {
+    "group": "D",
+    "counts": 40
+  },
+  {
+    "group": "DD",
+    "counts": 0
+  },
+  {
+    "group": "E",
+    "counts": 73
+  },
+  {
+    "group": "F",
+    "counts": 28
+  },
+  {
+    "group": "G",
+    "counts": 87
+  },
+  {
+    "group": "H",
+    "counts": 80
+  }
+]
