@@ -1,0 +1,41 @@
+{
+  "data": {
+    "url": "Type2Data.json"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Set",
+      "type": "nominal",
+      "axis": {
+        "titlePadding": 40
+      }
+    },
+    "y": {
+      "field": "count",
+      "type": "quantitative",
+      "axis": {
+        "titlePadding": 40
+      },
+      "scale": {
+        "type": "linear",
+        "domain": [ 0, 20 ]
+      }
+    },
+    "height": {
+      "field": "count",
+      "type": "quantitative",
+      "scale": {
+        "type": "linear",
+        "domain": [ 0, 100 ],
+        "range": [ 0, 500 ]
+      }
+    },
+    "yoffsetpct": {
+      "value": -0.5
+    },
+    "size": {
+      "value": 20
+    }
+  }
+}
