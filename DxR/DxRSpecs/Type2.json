@@ -19,23 +19,18 @@
       },
       "scale": {
         "type": "linear",
-        "domain": [ 0, 20 ]
+        "domain": [ 0, 100 ]
       }
     },
-    "height": {
-      "field": "count",
-      "type": "quantitative",
-      "scale": {
-        "type": "linear",
-        "domain": [ 0, 100 ],
-        "range": [ 0, 500 ]
-      }
+    "color": {
+      "field": "marked",
+      "type":  "nominal"
     },
     "yoffsetpct": {
-      "value": -0.5
+      "value": 0.5
     },
     "size": {
-      "value": 20
+      "value": 10
     }
   }
 }
