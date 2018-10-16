@@ -1,0 +1,622 @@
+[
+  {
+    "Set": "A",
+    "count": 1,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 2,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 3,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 4,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 5,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 6,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 7,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 8,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 9,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 10,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 11,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 12,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 15,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 16,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 17,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 18,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 19,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 20,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 21,
+    "marked": "no"
+  },
+
+  {
+    "Set": "A",
+    "count": 22,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 23,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 24,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 25,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 26,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 27,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 30,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 31,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 32,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 33,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 34,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 35,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 36,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 37,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 38,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 39,
+    "marked": "yes"
+  },
+
+  {
+    "Set": "A",
+    "count": 40,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 41,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 42,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 43,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 44,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 45,
+    "marked": "yes"
+  },
+
+  {
+    "Set": "A",
+    "count": 46,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 47,
+    "marked": "yes"
+  },
+  {
+    "Set": "A",
+    "count": 50,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 51,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 52,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 53,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 54,
+    "marked": "no"
+  },
+
+  {
+    "Set": "A",
+    "count": 55,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 56,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 57,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 58,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 59,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 60,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 61,
+    "marked": "no"
+  },
+
+  {
+    "Set": "A",
+    "count": 62,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 63,
+    "marked": "no"
+  },
+  {
+    "Set": "A",
+    "count": 64,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 1,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 2,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 3,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 4,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 5,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 6,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 7,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 8,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 9,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 10,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 11,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 12,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 13,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 14,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 15,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 16,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 17,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 20,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 21,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 22,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 23,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 24,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 25,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 26,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 27,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 28,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 29,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 30,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 31,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 34,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 35,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 36,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 37,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 38,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 39,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 40,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 41,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 42,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 43,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 44,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 45,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 46,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 47,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 48,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 49,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 50,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 51,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 52,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 53,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 54,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 55,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 56,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 57,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 60,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 61,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 62,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 63,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 64,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 65,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 66,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 67,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 68,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 69,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 70,
+    "marked": "no"
+  },
+  {
+    "Set": "B",
+    "count": 71,
+    "marked": "no"
+  }
+]
