@@ -1,0 +1,113 @@
+{
+  "data" : {
+    "url" : "Type5Data.json"
+  },
+  "mark" : "bar",
+  "encoding" : {
+    "x" : {
+      "field" : "Set",
+      "type" : "nominal",
+      "axis" : {
+        "titlePadding" : 40,
+        "filter" : false,
+        "face" : "front",
+        "orient" : "bottom",
+        "title" : "Set",
+        "length" : 500,
+        "color" : "#bebebe",
+        "grid" : false,
+        "ticks" : true,
+        "values" : [
+          "A",
+          "B"
+        ],
+        "tickCount" : 2,
+        "labels" : true
+      },
+      "scale" : {
+        "type" : "point",
+        "domain" : [
+          "A",
+          "B"
+        ],
+        "padding" : "0.05",
+        "range" : [
+          "0",
+          "500"
+        ]
+      }
+    },
+    "y" : {
+      "field" : "count",
+      "type" : "quantitative",
+      "axis" : {
+        "titlePadding" : 40,
+        "filter" : false,
+        "face" : "front",
+        "orient" : "left",
+        "title" : "count",
+        "length" : 500,
+        "color" : "#bebebe",
+        "grid" : false,
+        "ticks" : true,
+        "values" : [
+          "0",
+          "20",
+          "40",
+          "60",
+          "80",
+          "100"
+        ],
+        "tickCount" : 6,
+        "labels" : true
+      },
+      "scale" : {
+        "type" : "linear",
+        "domain" : [
+          0,
+          100
+        ],
+        "padding" : "0.05",
+        "range" : [
+          "0",
+          "500"
+        ]
+      }
+    },
+    "color" : {
+      "field" : "marked",
+      "type" : "nominal",
+      "scale" : {
+        "type" : "ordinal",
+        "domain" : [
+          "no",
+          "yes"
+        ],
+        "padding" : "0.05",
+        "range" : "category",
+        "scheme" : "tableau10"
+      },
+      "legend" : {
+        "type" : "symbol",
+        "filter" : false,
+        "gradientWidth" : 200,
+        "gradientHeight" : 50,
+        "face" : "front",
+        "orient" : "right",
+        "x" : 500,
+        "y" : 500,
+        "z" : 0,
+        "title" : "Legend: marked"
+      }
+    },
+    "yoffsetpct" : {
+      "value" : 0.5
+    },
+    "size" : {
+      "value" : 10
+    }
+  },
+  "width" : 500,
+  "height" : 500,
+  "depth" : 500
+}
