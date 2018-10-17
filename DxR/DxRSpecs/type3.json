@@ -1,26 +1,49 @@
 {
   "data": {
-    "url": "type3data.json"
+    "url": "Type3Data.json"
   },
-  "mark": "cube",
+  "mark": "bar",
   "encoding": {
     "x": {
-      "field": "group",
-      "type": "nominal"
+      "field": "bar",
+      "type": "nominal",
+      "width" : "750",
+      "axis" : {
+        "ticks" : false,
+        "labels" : false
+      }
+    },
+    "width" : {
+      "value" : 50
+    },
+    "xoffset" : {
+      "value" : 25
     },
     "y": {
       "field": "counts",
-      "type": "quantitative"
+      "type": "quantitative",
+      "axis" : {
+        "ticks" : false,
+        "labels" : false
+      }
     },
     "height": {
       "field": "counts",
+      "width" : "750",
       "type": "quantitative"
     },
-    "yoffsetpct": {
-      "value": -0.5
-    },
-    "width": {
-      "value": 40
+    "color" : {
+      "field" : "marked",
+      "type" : "nominal",
+      "scale" : {
+        "type" : "ordinal",
+        "domain" : [
+            false,
+            true
+        ],
+        "range" : "category",
+        "scheme" : "tableau10"
+      },
     }
   }
 }
