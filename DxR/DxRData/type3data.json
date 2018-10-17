@@ -1,38 +1,56 @@
 [
   {
     "group": "A",
+    "marked" : false,
+    "bar" : "1",
     "counts": 50
   },
   {
-    "group": "B",
+    "group": "A",
+    "marked" : true,
+    "bar" : "2",
     "counts": 30
   },
   {
-    "group": "C",
-    "counts": 35
+    "group": "A",
+    "marked" : false,
+    "bar" : "3",
+    "counts": 37
   },
   {
-    "group": "D",
+    "group": "A",
+    "marked" : false,
+    "bar" : "4",
     "counts": 40
   },
   {
-    "group": "DD",
+    "group": "null",
+    "marked" : false,
+    "bar" : "5",
     "counts": 0
   },
   {
-    "group": "E",
+    "group": "B",
+    "marked" : false,
+    "bar" : "6",
     "counts": 73
   },
   {
-    "group": "F",
+    "group": "B",
+    "marked" : false,
+    "bar" : "6",
     "counts": 28
   },
   {
-    "group": "G",
+    "group": "B",
+    "marked" : true,
+    "bar" : "7",
     "counts": 87
   },
   {
-    "group": "H",
+    "group": "B",
+    "marked" : false,
+    "bar" : "8",
     "counts": 80
   }
 ]
