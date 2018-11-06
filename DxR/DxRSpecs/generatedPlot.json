@@ -1,0 +1,172 @@
+{
+  "data" : {
+    "url" : "GenPlot.json"
+  },
+  "mark" : "sphere",
+  "encoding" : {
+    "x" : {
+      "field" : "Xcoord",
+      "type" : "quantitative",
+      "axis" : {
+        "titlePadding" : 40,
+        "filter" : false,
+        "face" : "front",
+        "orient" : "bottom",
+        "title" : "Xcoord",
+        "length" : 500,
+        "color" : "#bebebe",
+        "grid" : false,
+        "ticks" : true,
+        "values" : [
+          "0",
+          "200",
+          "400",
+          "600",
+          "800",
+          "1000"
+        ],
+        "tickCount" : 6,
+        "labels" : true
+      },
+      "scale" : {
+        "type" : "linear",
+        "domain" : [
+          0,
+          1000
+        ],
+        "padding" : "0.05",
+        "range" : [
+          "0",
+          "500"
+        ],
+        "paddingInner" : "0.05",
+        "paddingOuter" : "0.05"
+      }
+    },
+    "y" : {
+      "field" : "Ycoord",
+      "type" : "quantitative",
+      "axis" : {
+        "titlePadding" : 40,
+        "filter" : false,
+        "face" : "front",
+        "orient" : "left",
+        "title" : "Ycoord",
+        "length" : 500,
+        "color" : "#bebebe",
+        "grid" : false,
+        "ticks" : true,
+        "values" : [
+          "0",
+          "200",
+          "400",
+          "600",
+          "800",
+          "1000"
+        ],
+        "tickCount" : 6,
+        "labels" : true
+      },
+      "scale" : {
+        "type" : "linear",
+        "domain" : [
+          0,
+          1000
+        ],
+        "padding" : "0.05",
+        "range" : [
+          "0",
+          "500"
+        ],
+        "paddingInner" : "0.05",
+        "paddingOuter" : "0.05"
+      }
+    },
+    "z" : {
+      "field" : "Zcoord",
+      "type" : "quantitative",
+      "axis" : {
+        "titlePadding" : 40,
+        "filter" : false,
+        "face" : "left",
+        "orient" : "bottom",
+        "title" : "Zcoord",
+        "length" : 500,
+        "color" : "#bebebe",
+        "grid" : false,
+        "ticks" : true,
+        "values" : [
+          "0",
+          "200",
+          "400",
+          "600",
+          "800",
+          "1000"
+        ],
+        "tickCount" : 6,
+        "labels" : true
+      },
+      "scale" : {
+        "type" : "linear",
+        "domain" : [
+          0,
+          1000
+        ],
+        "padding" : "0.05",
+        "range" : [
+          "0",
+          "500"
+        ],
+        "paddingInner" : "0.05",
+        "paddingOuter" : "0.05"
+      }
+    },
+    "color" : {
+      "field" : "Color",
+      "type" : "nominal",
+      "scale" : {
+        "type" : "ordinal",
+        "domain" : [
+          "0",
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "padding" : "0.05",
+        "range" : "category",
+        "scheme" : "tableau20",
+        "paddingInner" : "0.05",
+        "paddingOuter" : "0.05"
+      },
+      "legend" : {
+        "type" : "symbol",
+        "filter" : false,
+        "gradientWidth" : 200,
+        "gradientHeight" : 50,
+        "face" : "front",
+        "orient" : "right",
+        "x" : 500,
+        "y" : 500,
+        "z" : 0,
+        "title" : "Legend: Color"
+      }
+    }
+  },
+  "width" : 500,
+  "height" : 500,
+  "depth" : 500
+}
