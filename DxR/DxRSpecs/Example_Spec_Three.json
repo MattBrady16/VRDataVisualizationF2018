@@ -1,0 +1,45 @@
+{
+  "data": {
+    "url": "Example_Data_Three.json"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "name",
+      "type": "nominal",
+      "axis": {
+	      "ticks" : false,
+	      "labels" : false
+      }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "axis": {
+	      "ticks" : false,
+	      "labels" : false
+      }
+    },
+    "height": {
+      "field": "value",
+      "type": "quantitative"
+    },
+    "color" : {
+      "field" : "group",
+      "type" : "ordinal",
+      "scale" : {
+        "domain" : ["default", "secondary", "marked"],
+        "scheme" : "tableau10"
+      }
+    },
+	"width" : {
+    "value" : 30
+  },
+  "yoffsetpct": {
+    "value" : 0.05
+  },
+  "xoffsetpct" : {
+    "value" : 0.25
+  }
+  }
+}
