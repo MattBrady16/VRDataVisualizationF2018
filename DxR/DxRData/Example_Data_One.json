@@ -1,0 +1,13 @@
+[
+	{"name" : "65", "group" : "default", "value" : 10},
+	{"name" : "66", "group" : "marked", "value" : 20},
+	{"name" : "67", "group" : "default", "value" : 40},
+	{"name" : "68", "group" : "default", "value" : 0},
+	{"name" : "69", "group" : "default", "value" : 40},
+	{"name" : "70", "group" : "marked", "value" : 20},
+	{"name" : "71", "group" : "default", "value" : 10},
+	{"name" : "72", "group" : "default", "value" : 0},
+	{"name" : "73", "group" : "default", "value" : 20},
+	{"name" : "74", "group" : "default", "value" : 40},
+	{"name" : "75", "group" : "default", "value" : 10}
+]
