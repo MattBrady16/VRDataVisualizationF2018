@@ -1,0 +1,37 @@
+||NAME: INTRO
+Now we will begin the experiment proper.
+If you are confused at any point, we
+encourage you to ask clarifying questions.
+Your progress through the 60 graphs is
+shown on the meter at the bottom of this
+panel.
+
+The full study can take anywhere from 6 to
+20 minutes.
+
+Please press the (A) button to continue.
+||NAME: PLOT_ONE
+Inspect the two orange bars shown in the
+displayed graph, and choose the shorter
+one.
+
+To choose the left bar,
+press the (X) button.
+ 
+To choose the right bar,
+press the (A) button.
+||NAME: PLOT_TWO
+Estimate the ratio of the smaller bar to
+the larger bar, using the joystick and the
+meter displayed on the right of this panel.
+
+Please press the (A) button 
+to confirm your choice.
+||NAME: PILOT_COMPLETE
+The full study is now complete. Thank you
+for your participation in this study, we
+appreciate your time! The final results
+will be shown at the Demo Day on Saturday,
+December 8th.
+
+Press the any button to complete the study.
