@@ -1,0 +1,110 @@
+||NAME: INTRO
+Welcome to the Data Visualization in
+Virtual Reality pilot study.
+ 
+Thank you for taking the time to
+participate, we appreciate your
+contribution! All instructions for this
+experiment will appear on this panel.
+ 
+First you will be introduced to the
+controls and format of the study, then
+the study itself will begin.
+
+Press any button on either controller
+to start the tutorial.
+||NAME: buttonA
+You will be using only three controls
+during this experiment, which will be
+introduced now.
+
+If at the end of this tutorial you are
+still confused about any controls,
+please tell one of the group members
+and we can explain them further.
+
+The first control is the (A) button,
+which is the lowermost round button
+on the top of the controller in your
+right hand.
+
+Please press the (A) button to continue.
+||NAME: buttonX
+The second control is the (X) button,
+which is the lowermost round button on
+the top of the controller in your LEFT
+hand.
+
+Please press the (X) button to continue.
+||NAME: buttonJoystick
+The final control is the joystick on
+your right controller. The number to
+your right is controlled by moving the
+joystick up or down.
+
+Move the joystick to get the number as
+close to 50% as you can, then press (A)
+to confirm your final answer.
+||NAME: taskOverview
+The program will show you 60 bar plots
+in various positions around the room,
+similar to the graphs shown now in the
+center of the room.
+ 
+For each graph, you must complete two
+tasks:
+
+1. Identify which of the
+highlighted orange bars is
+taller, by pressing (X) or (A).
+
+2. Estimate the ratio of
+the smaller bar to the larger
+bar, using the joystick.
+
+Please press the (A) button to continue.
+||NAME: taskTiming
+Please try to complete these tasks as
+quickly as you can without sacrificing
+accuracy.
+
+Additionally, since the plots will be
+appearing in various places around the
+room, feel encouraged to move around to
+get a better view, either through leaning,
+turning, or actually walking to a
+different position.
+
+If you choose to move, please remain
+cautious of the objects around you in the
+real world - your proctor will try to
+warn you if you get close to running into
+any.
+
+Please press the (A) button to continue.
+||NAME: startSamples
+You will now be shown two sample graphs
+to test what you've learned.
+
+Please press the (A) button to begin.
+||NAME: plotOne
+Inspect the two orange bars shown in the
+displayed graph, and choose the shorter 
+one.
+
+To choose the left bar, 
+press the (X) button.
+
+To choose the right bar, 
+press the (A) button.
+||NAME: plotTwo
+Estimate the ratio of the smaller bar to the
+larger bar, using the joystick and the meter
+displayed on the right of this panel.
+
+Please press the (A) button 
+to confirm your choice.
+||NAME: TUTORIAL_COMPLETE
+The tutorial is now complete!
+
+Please press the (A) button to continue.
