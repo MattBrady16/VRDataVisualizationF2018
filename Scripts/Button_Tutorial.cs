@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DxRR;
 using System;
+using System.IO;
 
 public class Button_Tutorial : MonoBehaviour {
 
@@ -10,46 +11,56 @@ public class Button_Tutorial : MonoBehaviour {
     public GameObject VisualizationObject;
     public GameObject instructText;
     public GameObject instructionPanel;
-    public GameObject ScaleObject;
-    
+    public GameObject MeterObject;
+    public GameObject head;
+    public GameObject exampleArray;
 
     [SerializeField]
     protected OVRInput.Controller m_controller;
 
-    private TextMesh instructionTextMesh;
-    private float timer;
-    private bool cooldown = false;
-    private int tutorialIndex;
-    private string[] textArray = new string[10];
-    private double[] ratios = new double[10];
-
-
-    IEnumerator WaitForA()
-    {
-        while (!(OVRInput.Get(OVRInput.Button.One) || Input.GetKeyDown("space")) && !cooldown)
-        {
-            yield return null;
-        }
-        
-    }
-
-    void ResetCooldown()
-    {
-        cooldown = false;
-    }
-        
+    private TextMesh instructionTextMesh; //text for editing the panel;
+    private float timer; //used for making sure double presses don't happen
+    private int tutorialIndex; //current step of tutorial; -1 means inactive
+    private string[] templateString; //stores spec .JSON template as two strings
+    private LoggingController logger; //object responsible for output
+    private MeterController meter;
+    private Vector3 vizObjInitPos;
+    private Quaternion vizObjInitRot;
+    private string[] textArray;
 
 
 
+    // Variables used in update, declared here for efficiency
+    private string fileName, type, exampleIndex, ratioText;
+    private int barChosen;
+    private float responseRatio, deltaSecsInit;
 
+    private const float TIMER_THRESHOLD = 0.25f; //threshold to prevent accidental double input
+    private const int NUM_EXPERIMENTS = 2, //number of experiments included in tutorial
+        PREAMBLE_LEN = 7; //number of "intro" slides before the tutorial starts properly
+    
+    
     bool RunTutorial()
     {
-        Debug.Log("Reached tutorial method");
-        instructionPanel.SetActive(true);
+        try
+        {
+            Debug.Log("Reached tutorial method");
+            instructionPanel.SetActive(true);
 
-        tutorialIndex = 0;
+            instructionTextMesh.text = textArray[0];
 
-        return true;
+            for (int i = 0; i < 15; i++)
+            {
+                Debug.Log(i + ": " + textArray[i]);
+            }
+
+            tutorialIndex = 0;
+            return logger.OpenFile("2D_Tutorial", true);
+        }
+        catch
+        {
+            return false;
+        }
     }
 
     // Use this for initialization
@@ -58,59 +69,73 @@ public class Button_Tutorial : MonoBehaviour {
         //Fetches the controller for the visualization object
         controller = VisualizationObject.GetComponent(typeof(VizController)) as VizController;
 
-        //Fetches actual text of the instruction text game object
+        //Fetches actual text of the text game objects
         instructionTextMesh = instructText.GetComponent<TextMesh>();
 
         instructionPanel.SetActive(false);
         VisualizationObject.SetActive(false);
-        ScaleObject.SetActive(false);
 
+        vizObjInitPos = VisualizationObject.transform.position;
+        vizObjInitRot = VisualizationObject.transform.rotation;
+
+        // Initializes the logger to the singleton instance
+        logger = LoggingController.Instance;
+
+        meter = MeterObject.GetComponent<MeterController>();
+
+        textArray = logger.LoadText("tutorial_text");
+        
         tutorialIndex = -1;
+        
+        
 
-        textArray[0] = "During this experiment, you will be\n" +
-    "shown a series of graphs.\n" +
-    "The first set will be bar graphs.\n" +
-    "For each bar graph, you must:\n\n" +
-    "1.Select which of the orange bars is\nlarger than the other.\n\n" +
-    "2.Estimate the ratio of the smaller bar\nto the larger one.\n\n\n" +
-    "Press (A) to continue.";
-        textArray[1] = "To select which graph is larger,\n" +
-            "press the corresponding button\n" +
-            "on your controller:\n" +
-            "either (A) for the left-most,\n" +
-            "or (B) for the right-most.\n\n\n" +
-            "Press (A) to continue.";
-        textArray[2] = "To select the ratio,\n" +
-            "use the joystick on your controller.\n" +
-            "Please use this feature to select\n" +
-            "50% on the meter to the right of\n" +
-            "this panel.\n\n\n" +
-            "Press (A) when the marker is as\n" +
-            "close to 50% as possible.";
-        textArray[3] = "You will now be shown 10 graphs of\n" +
-            "different types to test these abilities.\n" +
-            "This is a TUTORIAL.\n" +
-            "The experiment has not yet begun.\n\n\n" +
-            "Press (A) to begin the 10 graphs.";
-        textArray[4] = "Please select the larger of the two bars.\n" +
-            "(A) For the left most." +
-            "(B) For the right most.";
-        textArray[5] = "The tutorial is now complete.\n\nPress (A) to close.";
 
+
+        /* Block of code for generating random data sets
+         * 
+        string ratios = "";
+        for (int type = 1; type < 6; type++)
+        {
+            for (int i = 10; i < 20; i++)
+            {
+                int barOne, barTwo;
+                System.Random rand = new System.Random();
+                string[] temp;
+
+
+                string tempStr = controller.GenerateBar(9, type, rand);
+                Debug.Log(tempStr);
+                temp = tempStr.Split('|');
+                string fileName = String.Format("2D_T{0}_{1}", type, i);
+
+                controller.WriteDataFile(fileName, temp[0]);
+                barOne = Int32.Parse(temp[1]);
+                barTwo = Int32.Parse(temp[2]);
+                ratios += fileName + ": " + ((barOne > barTwo) ? barTwo / barOne : barOne / barTwo) + "\n";
+            }
+        }
+        controller.WriteDataFile("ratios2D_PilotStudies", ratios);
+        */
+
+        TextAsset templateText = Resources.Load("2D_Spec_Template") as TextAsset;
+        if (templateText == null)
+        {
+            Debug.Log("ERROR - NULL TEMPLATE");
+        }
+
+        templateString = templateText.text.Split('|');
 
     }
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "L_controllerCollider" || col.gameObject.name == "R_controllerCollider")
-        {
-            RunTutorial();
-        }
+        RunTutorial();
     }
 	
 	// Update is called once per frame
 	void Update () {
         timer += Time.deltaTime;
+
         if (Input.GetKeyDown(KeyCode.T))
         {
             Debug.Log("Running Tutorial");
@@ -120,73 +145,158 @@ public class Button_Tutorial : MonoBehaviour {
             }
         }
 
-        if (timer < 3.0f && Input.GetKeyDown(KeyCode.Space))
+        // Doesn't check input if not enough time has elapsed since last input
+        if (timer < TIMER_THRESHOLD || tutorialIndex < 0)
         {
-            Debug.Log(timer + ", " + tutorialIndex);
-            
+            return;
         }
 
-        if ((Input.GetKeyDown(KeyCode.Space) || OVRInput.Get(OVRInput.Button.One)) && tutorialIndex >= 0 && timer > 1.0f)
-        {
-            timer = 0.0f;
-            if (tutorialIndex > 3 && tutorialIndex < 13)
-            {
-                instructionTextMesh.text = textArray[3 + (tutorialIndex % 2)];
+        
 
+        if ((Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X) || OVRInput.Get(OVRInput.Button.One) || OVRInput.Get(OVRInput.Button.Three)))
+        {
+            Debug.Log("input recieved");
+            
+            // This triggers for all of the experimental steps
+            if (tutorialIndex >= PREAMBLE_LEN - 1 && tutorialIndex < (2 * NUM_EXPERIMENTS) + PREAMBLE_LEN - 1)
+            {
+                //Triggers for the first part of a plot experiment, i.e. which bar is smaller
                 if (tutorialIndex % 2 == 0)
                 {
-                    int barOne, barTwo;
-                    System.Random rand = new System.Random();
-                    string[] temp;
-                    string result = "";
+                    // This section records the previous step
+                    if (tutorialIndex > PREAMBLE_LEN + 1)
+                    {
+                        responseRatio = (float)meter.GetNum() / 100.0f;
 
-                    string tempStr = controller.GenerateBar(9, (tutorialIndex % 5) + 1, rand);
-                    Debug.Log(tempStr);
-                    temp = tempStr.Split('|');
+                        // Logs the past entry
+                        // NOTE: DOES NOT SAVE TO DISK. Use logger.CloseFile() to save all logged entries. 
+                        logger.RecordResults(type, deltaSecsInit, fileName,
+                            head.transform.position, head.transform.rotation,
+                            vizObjInitPos, vizObjInitRot,
+                            barChosen, responseRatio, timer);
+                    }
 
-                    controller.WriteDataFile("tutorial", temp[0]);
-                    barOne = Int32.Parse(temp[1]);
-                    barTwo = Int32.Parse(temp[2]);
-                    ratios[tutorialIndex - 4] = (barOne > barTwo) ? barTwo / barOne : barOne / barTwo;
 
-                    controller.UpdateVis("Tutorial_Spec.json");
-                    result += temp[0] +"," + temp[1] + "," + temp[2];
+                    // This section shows the upcoming step
+                    instructionTextMesh.text = textArray[PREAMBLE_LEN];
 
-                    ScaleObject.SetActive(false);
+
+                    if ((tutorialIndex - PREAMBLE_LEN) < NUM_EXPERIMENTS)
+                    {
+                        type = "1";
+                    }
+                    else
+                    {
+                        type = "3";
+                    }
+                    exampleIndex = "" + (tutorialIndex % 4);
+                    fileName = "2D_T" + type + "_" + exampleIndex;
+
+                    controller.WriteSpecFile(fileName + "_Spec", templateString[0] + fileName + templateString[1]);
+                    controller.UpdateVis(fileName + "_Spec.json");
+
+                    meter.SetStatus(false);
                 }
+
+                //Triggers for the ratio estimation portion
                 else
                 {
-                    ScaleObject.SetActive(true);
+                    // This section records the previous step
+                    barChosen = Input.GetKeyDown(KeyCode.Z) || OVRInput.Get(OVRInput.Button.Three) ? 0 : 1;
+                    deltaSecsInit = timer;
+
+                    // This section shows the upcoming step
+                    instructionTextMesh.text = textArray[PREAMBLE_LEN + 1];
+                    meter.SetStatus(true);
                 }
-                tutorialIndex++;
             }
-            else if (tutorialIndex == 13)
+
+            // Triggers only on the last slide
+            else if (tutorialIndex == (2 * NUM_EXPERIMENTS) + PREAMBLE_LEN - 1)
+            {
+                responseRatio = (float)meter.GetNum() / 100.0f;
+
+                // Logs the past entry
+                // NOTE: DOES NOT SAVE TO DISK. Use logger.CloseFile() to save all logged entries. 
+                logger.RecordResults(type, deltaSecsInit, fileName,
+                    head.transform.position, head.transform.rotation,
+                    vizObjInitPos, vizObjInitRot,
+                    barChosen, responseRatio, timer);
+
+                VisualizationObject.SetActive(false);
+
+                instructionTextMesh.text = textArray[PREAMBLE_LEN + 2];
+            }
+
+            // Triggers after the last slide - closes and saves everything
+            else if (tutorialIndex >= (2 * NUM_EXPERIMENTS) + PREAMBLE_LEN)
             {
                 tutorialIndex = -1;
+
+                logger.CloseFile();
+
                 instructionPanel.SetActive(false);
-                VisualizationObject.SetActive(false);
-                ScaleObject.SetActive(false);
+                meter.SetStatus(false);
+                return; //neccesary so it doesn't increment index again
             }
+
+            //Handles the preamble slides individually
             else
             {
-                instructionTextMesh.text = textArray[tutorialIndex];
-                tutorialIndex++;
+                switch (tutorialIndex)
+                {
+                    case 1:
+                        if ((Input.GetKeyDown(KeyCode.Z) || OVRInput.Get(OVRInput.Button.Three)))
+                        {
+                            return;
+                        }
+                        
+                        break;
+                    case 2:
+                        if ((Input.GetKeyDown(KeyCode.X) || OVRInput.Get(OVRInput.Button.One)))
+                        {
+                            return;
+                        }
+
+                        meter.SetStatus(true);
+                        break;
+                    case 3:
+                        if ((Input.GetKeyDown(KeyCode.Z) || OVRInput.Get(OVRInput.Button.Three)))
+                        {
+                            return;
+                        }
+                        meter.SetStatus(false);
+                        exampleArray.SetActive(true);
+
+
+                        break;
+                    case 4:
+                        if ((Input.GetKeyDown(KeyCode.Z) || OVRInput.Get(OVRInput.Button.Three)))
+                        {
+                            return;
+                        }                        
+                        exampleArray.SetActive(false);
+                        
+                        break;
+
+                    case 5:
+                        if ((Input.GetKeyDown(KeyCode.Z) || OVRInput.Get(OVRInput.Button.Three)))
+                        {
+                            return;
+                        }
+
+                        break;
+                    case 6:
+                        VisualizationObject.SetActive(true);
+
+                        break;
+                }
+
+                instructionTextMesh.text = textArray[tutorialIndex + 1];
             }
 
-            if (tutorialIndex == 2)
-            {
-                VisualizationObject.SetActive(true);
-            }
-            if (tutorialIndex == 3)
-            {
-                ScaleObject.SetActive(true);
-            }
-            if (tutorialIndex == 4)
-            {
-                ScaleObject.SetActive(false);
-            }
+            timer = 0;
+            tutorialIndex++;
         }
-
-
     }
 }
