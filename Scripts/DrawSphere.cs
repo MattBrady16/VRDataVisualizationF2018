@@ -22,8 +22,6 @@ public class DrawSphere : MonoBehaviour {
 
     bool isStart = true;
 
-    private SphereCollider needThisToRun; 
-
     // Use this for initialization
     void Start () {
         //cam = Camera.main;
@@ -60,31 +58,36 @@ public class DrawSphere : MonoBehaviour {
             {
                 Vector3 center = new Vector3(0f, 0f, 0f);
                 Vector3 avgRadius = new Vector3(0f, 0f, 0f);
+                Vector3 avgRadiusAbs = new Vector3(0f, 0f, 0f);
                 foreach (var sphere in spheres)
                 {
                     center += sphere.transform.position;
                 }
                 center = center / spheres.Count;
+                Vector3 maxPoint = new Vector3(0f, 0f, 0f);
                 foreach (var sphere in spheres)
                 {
                     Vector3 distanceFromCenter = sphere.transform.position - center;
+                    if(distanceFromCenter.magnitude > maxPoint.magnitude)
+                    {
+                        maxPoint = distanceFromCenter;
+                    }
+                    avgRadius += distanceFromCenter;
                     distanceFromCenter.x = Mathf.Abs(distanceFromCenter.x);
                     distanceFromCenter.y = Mathf.Abs(distanceFromCenter.y);
                     distanceFromCenter.z = Mathf.Abs(distanceFromCenter.z);
-                    avgRadius += distanceFromCenter;
+                    avgRadiusAbs += distanceFromCenter;
                     Destroy(sphere);
                 }
-                avgRadius = avgRadius / spheres.Count;
+                avgRadiusAbs = avgRadiusAbs / spheres.Count;
                 bigSphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 bigSphere.transform.position = center;
-                bigSphere.transform.localScale = new Vector3(avgRadius.x *4, avgRadius.y*4, avgRadius.z*4);
+                bigSphere.transform.localScale = new Vector3(avgRadiusAbs.x *4, avgRadiusAbs.y*4, avgRadiusAbs.z*4);
+                bigSphere.transform.rotation = Quaternion.LookRotation(Vector3.forward, maxPoint);
             }
-            else
+            foreach (var sphere in spheres)
             {
-                foreach (var sphere in spheres)
-                {
-                    Destroy(sphere);
-                }
+                Destroy(sphere);
             }
             spheres.Clear();
         }
