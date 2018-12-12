@@ -5,6 +5,9 @@ This project seeks to build a framework for scientific user studies seeking to q
 
 It was produced for the Fall 2018 session of the Virtual Reality for Interdisciniplinary Applications course at Vanderbilt University by Robb Doering, Matthew Brady, Matthew Mahoney, John Kim, and Darren Ho. 
 
+## "Layperson" Explanation
+https://docs.google.com/document/d/1nc96AnY7-lpNdZ7-lRHz5w76CDPoRk4DN-TJMhPsfWM/edit?usp=sharing
+
 ## Installation
 ### To Use / Test
 If you are looking to use the project as it currently exists, all you must do is download the exe file stored in this repository and start it on Windows. To get the full effect one must use an Oculus Rift headset with the program, along with both controllers and a decently sized space to walk around in. 
