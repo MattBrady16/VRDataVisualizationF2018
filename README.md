@@ -16,17 +16,17 @@ If you are looking to edit this project and continue with development, you will 
   3. Download the "MainScene.unity" file, import it into the project, and open it using File --> Open Scene.
   
 #### Assets
-  ##### * Resources Folder
+1. Resources Folder
     This can be found in this repository. To install, simply download into the Assets folder of your unity project.
-  ##### * Oculus VR
+2. Oculus VR
     This is necessary to use the Oculus integration, and is found on the Unity Asset store under the name "Oculus Integration".
-  ##### * Random From Distributions
+3. Random From Distributions
     This library is used for generation of multivariate gaussians for use in the 3D scatterplots. Download from the Unity asset store
     under the name "Random From Distributions: Statistical Distributions Random Number" by Nathan Daly. 
-  ##### * Real Materials
+4. Real Materials
     These are materials used for the signs and control panels in the environment. Download from the Unity asset store under the name 
     "Real Materials Vol.0 [FREE]".
-  ##### * LBRITE Font
+5. LBRITE Font
     This font is used for the signs in the game. Download from the following link and put into your Assets folder: 
     https://brushez.com/lbrite-ttf.html.
 
